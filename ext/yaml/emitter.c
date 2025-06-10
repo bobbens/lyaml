@@ -78,8 +78,8 @@ emit_STREAM_START (lua_State *L, lyaml_emitter *emitter)
 static int
 emit_STREAM_END (lua_State *L, lyaml_emitter *emitter)
 {
-   (void) L;
    yaml_event_t event;
+   (void) L;
    yaml_stream_end_event_initialize (&event);
    return yaml_emitter_emit (&emitter->emitter, &event);
 }
@@ -197,8 +197,8 @@ emit_MAPPING_START (lua_State *L, lyaml_emitter *emitter)
 static int
 emit_MAPPING_END (lua_State *L, lyaml_emitter *emitter)
 {
-   (void) L;
    yaml_event_t event;
+   (void) L;
    yaml_mapping_end_event_initialize (&event);
    return yaml_emitter_emit (&emitter->emitter, &event);
 }
@@ -241,8 +241,8 @@ emit_SEQUENCE_START (lua_State *L, lyaml_emitter *emitter)
 static int
 emit_SEQUENCE_END (lua_State *L, lyaml_emitter *emitter)
 {
-   (void) L;
    yaml_event_t event;
+   (void) L;
    yaml_sequence_end_event_initialize (&event);
    return yaml_emitter_emit (&emitter->emitter, &event);
 }
